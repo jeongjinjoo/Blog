@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
+import Banner1 from './images/죠르디 2.jpg';
 import './App.css';
 
 function App() {
@@ -32,7 +33,7 @@ function App() {
           {/* 배너 */}
           <div className="banner">
         <img
-          src="https://via.placeholder.com/1200x200?text=Welcome+to+My+Blog"
+          src={Banner1}
           alt="배너 이미지"
           className="banner-img"
         />
