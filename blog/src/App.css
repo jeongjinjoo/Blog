@@ -3,13 +3,14 @@
 }
 body{
   font-family: 'nanumsquare';
+  background-color: rgba(42, 2, 70, 0.918);
 }
 
 .black-nav {
-  background: black;
+  background: rgba(42, 2, 70, 0.918);
   width: 100%;
   display: flex;
-  color: white;
+  color: rgb(241, 46, 153);
   padding: 20px;
   font-weight: 600;
   font-size: 20px;
@@ -20,17 +21,75 @@ body{
   padding-left: 20px;
   padding-right: 20px;
 }
-
-.banner {
-  margin: 0px 0;
-  text-align: center;
+.login {
+  margin-left: auto;
+  padding-right: 50px;
+}
+.app-container {
+  display: flex; /*가로로 나열*/
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.banner-img {
-  width: 100%;
-  max-width: 1200px;
+.movie-container {
+  width : 250px;
+  margin: 16px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px;
+}
+
+.movie-container img {
+  max-width: 100%;
+  transition: transform 0.3s ease; /* 부드러운 확대 효과 */
+}
+
+.movie-container:hover {
+  transform: scale(1.1); /* 요소를 1.1배 확대 */
+}
+
+.movie-info {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie-info h4 {
+  margin: 0;
+  color: white;
+}
+
+.movie-info span {
+  margin-left: 3px;
+  color: white;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto; /* 가로 스크롤 허용 */
+  white-space: nowrap; /* 포스터가 한 줄에 배치되도록 설정 */
+  padding: 20px;
+  background-color: #222; /* 배너 배경 */
+}
+
+.banner-movies {
+  display: flex;
+  gap: 10px; /* 포스터 간 간격 */
+}
+
+.movie-poster {
+  width: 150px;
   height: auto;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+.movie-poster:hover {
+  transform: scale(1.1); /* 호버 시 확대 효과 */
 }
 
 .App-logo {

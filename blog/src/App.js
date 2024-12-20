@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { dummy } from './movieDummy'
+import Movie from './components/movies'
 import logo from './logo.svg';
 import Banner1 from './images/죠르디 2.jpg';
 import './App.css';
@@ -28,15 +30,22 @@ function App() {
        {/* 헤더 */}
      <div className="black-nav">
        {/* <div style = {{color : 'blue', fontSize : '30px'}}>개발 Blog</div> */}
-       <div>개발 Blog</div> 
+       <div>ZWacth | 영화</div> 
+       <div className="login">Login</div> 
      </div>
           {/* 배너 */}
-          <div className="banner">
-        <img
-          src={Banner1}
-          alt="배너 이미지"
-          className="banner-img"
-        />
+          <div className="app-container">
+            {
+              dummy.results.map((item) => {
+                return (
+                  <Movie
+                    title={item.title}
+                    poster_path={item.poster_path}
+                    vote_average={item.vote_average}
+                  />
+                )
+              })
+            }
       </div>
      {/* <img src={logo} /> */}
      {/* <h4> { posts }</h4> */}
