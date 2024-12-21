@@ -47,6 +47,24 @@ function App() {
               })
             }
       </div>
+      <div className="weather">
+  <span>요즘 같은 날씨, 이런 영화는 어때요?</span>
+  <div className="weather-movies">
+    {dummy.results.slice(0, 3).map((movie, index) => ( // 상위 3개 영화만 추천
+      <div key={index} className="weather-movie">
+        <img 
+          src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} 
+          alt={movie.title} 
+          className="movie-poster"
+        />
+        <div className="movie-info">
+          <h4>{movie.title}</h4>
+          <p>평점: {movie.vote_average}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
      {/* <img src={logo} /> */}
      {/* <h4> { posts }</h4> */}
      <div className='list'>
