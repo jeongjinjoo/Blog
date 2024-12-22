@@ -26,13 +26,15 @@ body{
   margin-left: auto;
   padding-right: 50px;
 }
+
+/* 영화 정보 스타일일 */
 .app-container {
   display: flex; /*가로로 나열*/
   flex-wrap: wrap;
   justify-content: center;
 }
 
-
+/* 날씨 스타일 */
 .weather {
   background: linear-gradient(120deg, #a6c0fe, #f68084);
   color: white;
@@ -70,6 +72,7 @@ body{
   text-align: center;
 }
 
+/* 영화 포스터 스타일 */
 .movie-poster {
   width: 150px;
   height: 225px;
